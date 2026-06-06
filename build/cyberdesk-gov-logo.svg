@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="CyberDesk government cyber operations seal">
+  <defs>
+    <radialGradient id="field" cx="50%" cy="36%" r="70%">
+      <stop offset="0" stop-color="#103321"/>
+      <stop offset="0.55" stop-color="#06140d"/>
+      <stop offset="1" stop-color="#010403"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="78" x2="430" y1="78" y2="430">
+      <stop offset="0" stop-color="#fff1b8"/>
+      <stop offset="0.42" stop-color="#ffcf70"/>
+      <stop offset="1" stop-color="#9f6f18"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="140" x2="372" y1="130" y2="382">
+      <stop offset="0" stop-color="#8dff9d"/>
+      <stop offset="1" stop-color="#24b851"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="76" fill="#010403"/>
+  <circle cx="256" cy="256" r="218" fill="url(#field)" stroke="url(#gold)" stroke-width="14"/>
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#42ff68" stroke-opacity="0.45" stroke-width="4"/>
+  <circle cx="256" cy="256" r="162" fill="#020906" stroke="#ffcf70" stroke-opacity="0.45" stroke-width="4"/>
+
+  <g fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round">
+    <path d="M122 276c28 58 72 94 134 116"/>
+    <path d="M390 276c-28 58-72 94-134 116"/>
+    <path d="M116 236c22 10 44 17 67 21"/>
+    <path d="M396 236c-22 10-44 17-67 21"/>
+  </g>
+
+  <path d="M256 108 370 151v96c0 74-43 128-114 166-71-38-114-92-114-166v-96Z" fill="#06140d" stroke="url(#gold)" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M256 142 335 172v70c0 51-29 89-79 119-50-30-79-68-79-119v-70Z" fill="#03110b" stroke="#42ff68" stroke-opacity="0.62" stroke-width="5"/>
+
+  <path d="M182 226h148" stroke="#ffcf70" stroke-width="10" stroke-linecap="round"/>
+  <path d="M204 259h104" stroke="#ffcf70" stroke-width="9" stroke-linecap="round"/>
+  <path d="M224 291h64" stroke="#ffcf70" stroke-width="8" stroke-linecap="round"/>
+
+  <path d="M188 214c34-14 53-40 68-78 15 38 34 64 68 78-29 12-48 34-68 68-20-34-39-56-68-68Z" fill="url(#neon)" stroke="#eaffef" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="256" cy="214" r="22" fill="#010403" stroke="#eaffef" stroke-width="6"/>
+  <circle cx="256" cy="214" r="7" fill="#ffcf70"/>
+
+  <g stroke="#42ff68" stroke-opacity="0.75" stroke-width="7" stroke-linecap="round">
+    <path d="M256 136v48"/>
+    <path d="M256 244v88"/>
+    <path d="M165 228h54"/>
+    <path d="M293 228h54"/>
+    <path d="M205 160l34 34"/>
+    <path d="M307 160l-34 34"/>
+  </g>
+
+  <g fill="#ffcf70">
+    <circle cx="256" cy="56" r="7"/>
+    <circle cx="328" cy="70" r="6"/>
+    <circle cx="390" cy="110" r="6"/>
+    <circle cx="432" cy="172" r="6"/>
+    <circle cx="456" cy="244" r="6"/>
+    <circle cx="444" cy="318" r="6"/>
+    <circle cx="402" cy="378" r="6"/>
+    <circle cx="334" cy="424" r="6"/>
+    <circle cx="256" cy="456" r="7"/>
+    <circle cx="178" cy="424" r="6"/>
+    <circle cx="110" cy="378" r="6"/>
+    <circle cx="68" cy="318" r="6"/>
+    <circle cx="56" cy="244" r="6"/>
+    <circle cx="80" cy="172" r="6"/>
+    <circle cx="122" cy="110" r="6"/>
+    <circle cx="184" cy="70" r="6"/>
+  </g>
+</svg>

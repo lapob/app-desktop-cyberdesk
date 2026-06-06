@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===================================================== -->
+    <!-- DOCUMENT HEAD: metadati, titolo e foglio stile -->
+    <!-- ===================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBERDESK GOV OPS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ===================================================== -->
+    <!-- BOOT SCREEN: finta sequenza di avvio stile Linux -->
+    <!-- ===================================================== -->
+    <section id="bootScreen" class="boot-screen">
+        <div id="bootCodeWall" class="boot-code-wall" aria-hidden="true"></div>
+        <div class="boot-data-field" aria-hidden="true"></div>
+        <div class="boot-scan-beam" aria-hidden="true"></div>
+
+        <div class="boot-modern-backdrop" aria-hidden="true">
+            <div class="boot-classification-strip">
+                <span>LOCAL GOV-CYBER OPS</span>
+                <span>AUTHORIZED LAB</span>
+                <span>CYBERDESK v2.0.0</span>
+            </div>
+        </div>
+
+        <div class="boot-shell">
+            <div class="boot-panel boot-main-panel">
+                <div class="boot-topline">
+                    <span id="bootRoleLabel">GOV SECURE INIT / KALI WSL BRIDGE</span>
+                    <em id="bootVersionBadge">CYBERDESK v2.0.0</em>
+                    <strong id="bootPercent">000%</strong>
+                </div>
+
+                <div class="boot-hero">
+                    <img class="boot-logo" src="../build/cyberdesk-gov-logo.svg" alt="">
+                    <div class="boot-brand">
+                        <span>CYBERDESK</span>
+                        <strong id="bootModeLabel">GOV CYBER OPERATIONS</strong>
+                        <p id="bootSubtitle" class="boot-subtitle">Local command desk for secure labs, system telemetry, WSL operations and operator notes.</p>
+                    </div>
+                </div>
+
+                <div class="boot-hud">
+                    <article>
+                        <span>VERSION</span>
+                        <strong id="bootVersionHud">v2.0.0</strong>
+                    </article>
+                    <article>
+                        <span>SESSION</span>
+                        <strong id="bootSessionId">LOCAL-0000</strong>
+                    </article>
+                    <article>
+                        <span>DISPLAY</span>
+                        <strong id="bootDisplayId">PRIMARY</strong>
+                    </article>
+                    <article>
+                        <span>STAGE</span>
+                        <strong id="bootStageLabel">STANDBY</strong>
+                    </article>
+                </div>
+
+                <div class="boot-script-console">
+                    <header>
+                        <span>operator@cyberdesk:~/boot/init.sh</span>
+                        <strong>LIVE</strong>
+                    </header>
+                    <pre id="bootScriptConsole"></pre>
+                </div>
+
+                <div id="bootFeed" class="boot-feed"></div>
+
+                <div class="boot-progress">
+                    <div id="bootProgress"></div>
+                </div>
+
+                <p id="bootStatusLine" class="boot-status-line">GOV OPS BOOT :: 000% :: LOCAL / WSL / TELEMETRY BUS</p>
+            </div>
+
+            <aside class="boot-panel boot-side-panel">
+                <div class="boot-core" aria-hidden="true">
+                    <img src="../build/cyberdesk-gov-logo.svg" alt="">
+                    <span id="bootCorePercent">0%</span>
+                    <b></b>
+                    <i></i>
+                </div>
+
+                <div id="bootStatusGrid" class="boot-status-grid">
+                    <span data-boot-module>WSL BRIDGE</span>
+                    <span data-boot-module>APP WORKSPACE</span>
+                    <span data-boot-module>START MENU</span>
+                    <span data-boot-module>LOCAL TOOLS</span>
+                </div>
+
+                <div class="boot-telemetry">
+                    <p><span>CPU FRAME</span><strong id="bootTelemetryCpu">--%</strong></p>
+                    <p><span>APP CACHE</span><strong id="bootTelemetryCache">--%</strong></p>
+                    <p><span>WSL BUS</span><strong id="bootTelemetryWs">IDLE</strong></p>
+                    <p><span>VISUAL FX</span><strong id="bootTelemetryFx">ARMED</strong></p>
+                </div>
+
+                <div class="boot-system-preview" aria-hidden="true">
+                    <div class="boot-system-grid"></div>
+                    <span class="boot-system-dot ping-a"></span>
+                    <span class="boot-system-dot ping-b"></span>
+                    <span class="boot-system-dot ping-c"></span>
+                    <span class="boot-system-dot ping-d"></span>
+                    <small>APP SHORTCUT HUB</small>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- AUTH SCREEN: login locale dopo il boot -->
+    <!-- ===================================================== -->
+    <section id="authScreen" class="auth-screen hidden" aria-label="CyberDesk login">
+        <div class="auth-card">
+            <header class="auth-header">
+                <img src="../build/cyberdesk-gov-logo.svg" alt="">
+                <div>
+                    <span>CYBERDESK ACCESS CONTROL</span>
+                    <strong>Local Account Login</strong>
+                    <small id="authDatabasePath">secure local database</small>
+                </div>
+            </header>
+
+            <div class="auth-grid">
+                <form id="authLoginForm" class="auth-panel">
+                    <h2>Sign In</h2>
+                    <label>
+                        Username
+                        <input id="authLoginUsername" type="text" maxlength="32" autocomplete="username" spellcheck="false" required>
+                    </label>
+                    <label>
+                        Password
+                        <input id="authLoginPassword" type="password" autocomplete="current-password" required>
+                    </label>
+                    <button type="submit">Login</button>
+                </form>
+
+                <form id="authCreateForm" class="auth-panel">
+                    <h2>Create Account</h2>
+                    <label>
+                        Display name
+                        <input id="authCreateDisplay" type="text" maxlength="40" autocomplete="name" spellcheck="false">
+                    </label>
+                    <label>
+                        Username
+                        <input id="authCreateUsername" type="text" maxlength="32" autocomplete="username" spellcheck="false" required>
+                    </label>
+                    <label>
+                        Password
+                        <input id="authCreatePassword" type="password" minlength="8" autocomplete="new-password" required>
+                    </label>
+                    <button type="submit">Create Account</button>
+                    <small><span id="authCreateHint">First account becomes admin.</span> Password: 8+ chars, letters and numbers.</small>
+                </form>
+            </div>
+
+            <p id="authStatus" class="auth-status">Boot complete. Login or create a local account.</p>
+        </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- DESKTOP SHELL: contenitore principale dell'OS -->
+    <!-- ===================================================== -->
+    <main id="desktop" class="desktop hidden">
+        <!-- ================================================= -->
+        <!-- TOP BAR: barra superiore tipo Linux -->
+        <!-- ================================================= -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <button id="systemMenuButton" class="system-button" type="button" aria-expanded="false" aria-controls="systemMenu">
+                    <img class="system-logo" src="../build/cyberdesk-gov-logo.svg" alt="">
+                    <span>CYBERDESK</span>
+                </button>
+                <!-- OS MENU: linguaggio visivo da sistema operativo cinematografico -->
+                <nav class="os-menu-strip" aria-label="Desktop menu">
+                    <span>FILE</span>
+                    <span>VIEW</span>
+                    <span>SELECT</span>
+                    <span>NODE</span>
+                    <span>LIVE FEED</span>
+                </nav>
+                <span id="workspaceLabel">workspace: ethical-lab</span>
+                <span class="classification-pill">LOCAL GOV-CYBER OPS</span>
+                <span id="appVersionTop" class="version-pill">v2.0.0</span>
+            </div>
+
+            <div class="topbar-center">
+                <span id="activeWindowLabel">root@cyberdesk:~</span>
+            </div>
+
+            <div class="topbar-right">
+                <span id="systemClock">00:00:00</span>
+                <button class="topbar-icon" type="button" data-open-window="settingsWindow">SET</button>
+                <button class="topbar-icon" type="button" onclick="minimizeWindow()">_</button>
+                <button class="topbar-icon danger" type="button" onclick="closeWindow()">X</button>
+            </div>
+        </header>
+
+        <!-- ================================================= -->
+        <!-- DESKTOP BACKGROUND: griglia, scanline e matrice -->
+        <!-- ================================================= -->
+        <section class="desktop-stage" aria-label="CyberDesk desktop">
+            <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
+
+            <!-- DESKTOP FILM BACKDROP: struttura visiva da control room teal -->
+            <div class="desktop-film-backdrop" aria-hidden="true">
+                <div class="desktop-film-grid"></div>
+
+                <div class="desktop-film-rail">
+                    <span>07</span>
+                    <i></i>
+                    <span>08</span>
+                    <i></i>
+                    <span>10</span>
+                </div>
+
+                <div class="desktop-ghost-panel ghost-panel-a"></div>
+                <div class="desktop-ghost-panel ghost-panel-b"></div>
+                <div class="desktop-ghost-panel ghost-panel-c"></div>
+
+                <div class="desktop-bottom-strip">
+                    <span>SYS READY</span>
+                    <span>KALI WSL</span>
+                    <span>LOCAL LAB</span>
+                    <span>APP HUB</span>
+                    <span>INSTALL READY</span>
+                </div>
+            </div>
+            <div class="desktop-vignette"></div>
+
+            <!-- ============================================= -->
+            <!-- RIGHT DOCK: launcher principale dell'OS -->
+            <!-- ============================================= -->
+            <aside class="dock" aria-label="Launcher dock">
+                <button type="button" data-open-window="overviewWindow">
+                    <span>OS</span>
+                    Overview
+                </button>
+
+                <button type="button" data-open-window="terminalWindow">
+                    <span>$_</span>
+                    Terminal
+                </button>
+
+                <button type="button" data-open-window="monitorWindow">
+                    <span>SYS</span>
+                    Monitor
+                </button>
+
+                <button type="button" data-open-window="networkWindow">
+                    <span>NET</span>
+                    Network
+                </button>
+
+                <button type="button" data-open-window="labWindow">
+                    <span>LAB</span>
+                    Lab
+                </button>
+
+                <button type="button" data-open-window="opsWindow">
+                    <span>OPS</span>
+                    Ops
+                </button>
+
+                <button type="button" data-open-window="wslGuideWindow">
+                    <span>CMD</span>
+                    WSL
+                </button>
+
+                <button type="button" data-open-window="launcherWindow">
+                    <span>RUN</span>
+                    Apps
+                </button>
+
+                <button type="button" data-open-window="searchWindow">
+                    <span>FND</span>
+                    Search
+                </button>
+
+                <button type="button" data-open-window="logbookWindow">
+                    <span>LOG</span>
+                    Logbook
+                </button>
+
+                <button type="button" data-open-window="databaseWindow">
+                    <span>DB</span>
+                    Database
+                </button>
+
+                <button type="button" data-open-window="accountAdminWindow">
+                    <span>ACC</span>
+                    Accounts
+                </button>
+
+            </aside>
+
+            <!-- ============================================= -->
+            <!-- SYSTEM MENU: menu rapido stile distribuzione -->
+            <!-- ============================================= -->
+            <nav id="systemMenu" class="system-menu hidden">
+                <button type="button" data-open-window="overviewWindow">Open Overview</button>
+                <button type="button" data-open-window="terminalWindow">Open Terminal</button>
+                <button type="button" data-open-window="opsWindow">Open Kali Ops</button>
+                <button type="button" data-open-window="wslGuideWindow">Open WSL Commands</button>
+                <button type="button" data-open-window="launcherWindow">Open Apps</button>
+                <button type="button" data-open-window="searchWindow">Open Matrix Search</button>
+                <button type="button" data-open-window="logbookWindow">Open Logbook</button>
+                <button type="button" data-open-window="databaseWindow">Open Database</button>
+                <button type="button" data-open-window="accountAdminWindow">Open Account Admin</button>
+                <button type="button" data-open-window="settingsWindow">Open Settings</button>
+                <button type="button" onclick="runTerminalPreset('help')">Show Commands</button>
+                <button type="button" onclick="applyNamedLayout('command')">Layout Command</button>
+                <button type="button" onclick="applyNamedLayout('network')">Layout Network</button>
+                <button type="button" onclick="applyNamedLayout('lab')">Layout Lab</button>
+                <button type="button" data-quick-action="cinematicLayout">Cinematic Layout</button>
+                <button type="button" data-quick-action="replayBoot">Replay Boot</button>
+                <button type="button" data-quick-action="focusMode">Focus Mode</button>
+                <button type="button" data-quick-action="cleanDesktop">Clean Desktop</button>
+                <button type="button" data-quick-action="systemSnapshot">Copy Snapshot</button>
+                <button type="button" data-quick-action="cycleTheme">Cycle Theme</button>
+                <button type="button" data-quick-action="boostMode">Boost Lite</button>
+                <button type="button" data-quick-action="govVisualProfile">Gov Visual Profile</button>
+                <button type="button" data-quick-action="visualCleanup">GPU Cleanup</button>
+                <button type="button" data-quick-action="sessionBrief">Session Brief</button>
+                <button type="button" data-quick-action="securitySweep">Security Sweep</button>
+                <button type="button" data-quick-action="lockScreen">Lock Screen</button>
+            </nav>
+
+            <!-- ============================================= -->
+            <!-- COMMAND PALETTE: apertura rapida stile OS -->
+            <!-- ============================================= -->
+            <section id="commandPalette" class="command-palette hidden-window" aria-label="Command palette">
+                <div class="palette-panel">
+                    <header>
+                        <span>CYBER COMMAND PALETTE</span>
+                        <strong>CTRL+K</strong>
+                    </header>
+                    <input id="paletteInput" type="text" placeholder="Search windows, apps, commands..." autocomplete="off">
+                    <div id="paletteResults" class="palette-results"></div>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- TASKBAR: finestre aperte/minimizzate -->
+            <!-- ============================================= -->
+            <div id="windowTaskbar" class="window-taskbar" aria-label="Open windows"></div>
+            <div id="toastStack" class="toast-stack" aria-live="polite"></div>
+            <section id="lockOverlay" class="lock-overlay hidden" aria-label="Session lock">
+                <div class="lock-panel">
+                    <span>CYBERDESK v2.0.0</span>
+                    <strong>SESSION LOCKED</strong>
+                    <em id="lockReason">MANUAL LOCK / LOCAL CONSOLE</em>
+                    <p>LOCAL GOV-CYBER OPS workspace is hidden.</p>
+                    <button id="unlockButton" type="button">Unlock</button>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: ACCOUNT ADMIN / GESTIONE UTENTI LOCALI -->
+            <!-- ============================================= -->
+            <section id="accountAdminWindow" class="os-window account-admin-window hidden-window" data-window-title="Account Admin">
+                <header class="window-bar">
+                    <span>Account Admin</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="accountAdminWindow">-</button>
+                        <button type="button" data-maximize="accountAdminWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body account-admin-body">
+                    <div class="account-admin-summary">
+                        <div>
+                            <span>Current session</span>
+                            <strong id="authSessionLabel">locked</strong>
+                        </div>
+                        <div>
+                            <span>Local auth database</span>
+                            <strong id="accountDbPath">loading</strong>
+                        </div>
+                    </div>
+
+                    <div class="account-admin-toolbar">
+                        <button type="button" onclick="refreshAccountUsers()">Refresh Users</button>
+                        <button type="button" onclick="logoutAccount()">Logout</button>
+                    </div>
+
+                    <div id="accountAdminStatus" class="account-admin-status">Admin access required.</div>
+                    <div id="accountUserList" class="account-user-list"></div>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: OVERVIEW / CENTRO OPERATIVO V2 -->
+            <!-- ============================================= -->
+            <section id="overviewWindow" class="os-window overview-window active-window" data-window-title="CyberDesk Overview">
+                <header class="window-bar">
+                    <span>CyberDesk Overview</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="overviewWindow">-</button>
+                        <button type="button" data-maximize="overviewWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body overview-body">
+                    <section class="overview-hero">
+                        <span>CONTROL ROOM</span>
+                        <strong id="overviewStatus">authorized local workspace</strong>
+                    </section>
+
+                    <section class="overview-stats">
+                        <div>
+                            <span>CPU</span>
+                            <strong id="overviewCpu">--%</strong>
+                        </div>
+                        <div>
+                            <span>RAM</span>
+                            <strong id="overviewRam">--%</strong>
+                        </div>
+                        <div>
+                            <span>HOST</span>
+                            <strong id="overviewHost">loading</strong>
+                        </div>
+                        <div>
+                            <span>LOCAL IP</span>
+                            <strong id="overviewIp">loading</strong>
+                        </div>
+                    </section>
+
+                    <!-- Grafici rapidi della home: gauge CPU/RAM e storico compatto. -->
+                    <section class="overview-system-charts" aria-label="System charts">
+                        <article class="mini-gauge-card">
+                            <div id="overviewCpuGauge" class="ring-gauge" style="--value: 0">
+                                <strong>--%</strong>
+                            </div>
+                            <div>
+                                <span>CPU LOAD</span>
+                                <small id="overviewCpuDetail">waiting for sample</small>
+                            </div>
+                        </article>
+
+                        <article class="mini-gauge-card">
+                            <div id="overviewRamGauge" class="ring-gauge" style="--value: 0">
+                                <strong>--%</strong>
+                            </div>
+                            <div>
+                                <span>RAM LOAD</span>
+                                <small id="overviewRamDetail">waiting for sample</small>
+                            </div>
+                        </article>
+
+                        <article class="history-card">
+                            <header>
+                                <span>CPU / RAM HISTORY</span>
+                                <small id="overviewHistoryLabel">last samples</small>
+                            </header>
+                            <div id="overviewSystemSparkline" class="dual-sparkline"></div>
+                        </article>
+                    </section>
+
+                    <section class="overview-actions">
+                        <button type="button" data-open-window="terminalWindow">Terminal</button>
+                        <button type="button" data-open-window="networkWindow">Network</button>
+                        <button type="button" data-open-window="launcherWindow">Apps</button>
+                        <button type="button" data-open-window="logbookWindow">Logbook</button>
+                        <button type="button" data-open-window="databaseWindow">Database</button>
+                        <button type="button" data-quick-action="cinematicLayout">Cinematic</button>
+                        <button type="button" data-quick-action="replayBoot">Replay Boot</button>
+                        <button type="button" data-quick-action="focusMode">Focus</button>
+                        <button type="button" data-quick-action="cleanDesktop">Clean</button>
+                        <button type="button" data-quick-action="systemSnapshot">Snapshot</button>
+                        <button type="button" data-quick-action="cycleTheme">Theme</button>
+                        <button type="button" data-quick-action="boostMode">Boost</button>
+                        <button type="button" data-quick-action="govVisualProfile">Gov Profile</button>
+                        <button type="button" data-quick-action="visualCleanup">GPU</button>
+                        <button type="button" data-quick-action="sessionBrief">Brief</button>
+                        <button type="button" data-quick-action="securitySweep">Sweep</button>
+                        <button type="button" data-quick-action="lockScreen">Lock</button>
+                    </section>
+
+                    <section class="overview-feed">
+                        <div>
+                            <span>OPEN WINDOWS</span>
+                            <strong id="overviewOpenWindows">0</strong>
+                        </div>
+                        <div>
+                            <span>LOGBOOK ENTRIES</span>
+                            <strong id="overviewNotesCount">0</strong>
+                        </div>
+                        <div>
+                            <span>DATABASE ITEMS</span>
+                            <strong id="overviewDatabaseCount">0</strong>
+                        </div>
+                    </section>
+
+                    <section class="overview-deck">
+                        <article>
+                            <h3>Live System</h3>
+                            <p><span>Uptime</span><strong id="overviewUptime">-- min</strong></p>
+                            <p><span>Total RAM</span><strong id="overviewTotalRam">-- GB</strong></p>
+                            <p><span>WSL</span><strong id="overviewWslStatus">offline</strong></p>
+                            <p><span>Theme</span><strong id="overviewTheme">green</strong></p>
+                            <p><span>Version</span><strong id="overviewVersion">v2.0.0</strong></p>
+                        </article>
+
+                        <article>
+                            <h3>Quick Layouts</h3>
+                            <div class="layout-actions">
+                                <button type="button" onclick="applyNamedLayout('command')">Command</button>
+                                <button type="button" onclick="applyNamedLayout('network')">Network</button>
+                                <button type="button" onclick="applyNamedLayout('lab')">Lab</button>
+                                <button type="button" onclick="saveCurrentLayout('custom')">Save</button>
+                                <button type="button" onclick="applyNamedLayout('custom')">Restore</button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h3>Recent Activity</h3>
+                            <p><span>Last command</span><strong id="overviewLastCommand">none</strong></p>
+                            <p><span>Update</span><strong id="overviewUpdateState">idle</strong></p>
+                            <p><span>Adapters</span><strong id="overviewAdapters">0</strong></p>
+                            <p><span>Mode</span><strong id="overviewPerformance">auto</strong></p>
+                            <p><span>Profile</span><strong id="overviewProfile">cinematic</strong></p>
+                            <p><span>Shell</span><strong id="overviewShellMode">Kali WSL</strong></p>
+                        </article>
+
+                        <article class="sweep-panel">
+                            <h3>Security Sweep</h3>
+                            <p><span>Status</span><strong id="overviewSweepState">standby</strong></p>
+                            <p><span>Risk</span><strong id="overviewSweepRisk">green</strong></p>
+                            <p><span>Last Sweep</span><strong id="overviewSweepLast">never</strong></p>
+                            <p><span>Directive</span><strong id="overviewSweepDirective">run sweep</strong></p>
+                        </article>
+                    </section>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: PROGRAM CONSOLE / TERMINALE -->
+            <!-- ============================================= -->
+            <section id="terminalWindow" class="os-window terminal-window" data-window-title="Program Console">
+                <header class="window-bar">
+                    <span>Program Console</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="terminalWindow">-</button>
+                        <button type="button" data-maximize="terminalWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body terminal-body">
+                    <!-- Barra shell: scegli quale terminale reale usare -->
+                    <div class="terminal-toolbar">
+                        <button type="button" data-shell-mode="wsl">Kali WSL</button>
+                        <button type="button" data-shell-mode="powershell">PowerShell</button>
+                        <button type="button" data-shell-mode="cmd">CMD</button>
+                        <button id="terminalNewTabButton" type="button">New Tab</button>
+                        <button id="terminalRestartButton" type="button">Restart</button>
+                        <button id="terminalStopButton" type="button">Stop</button>
+                        <button id="terminalInterruptButton" type="button">Ctrl+C</button>
+                        <button id="terminalClearButton" type="button">Clear</button>
+                        <button id="terminalPasteButton" type="button">Paste</button>
+                        <button id="terminalCopyButton" type="button">Copy</button>
+                        <button id="terminalNoteButton" type="button">Note</button>
+                        <input id="terminalFilter" class="terminal-filter" type="text" placeholder="filter output" autocomplete="off">
+                        <span id="terminalStatus">offline</span>
+                    </div>
+
+                    <div id="terminalTabs" class="terminal-tabs"></div>
+                    <div class="terminal-favorites">
+                        <button type="button" onclick="runTerminalPreset('sys')">sys</button>
+                        <button type="button" onclick="runTerminalPreset('net')">net</button>
+                        <button type="button" onclick="runTerminalPreset('ports')">ports</button>
+                        <button type="button" onclick="runTerminalPreset('disk')">disk</button>
+                        <button type="button" onclick="runTerminalPreset('env')">env</button>
+                        <button type="button" onclick="runTerminalPreset('help')">help</button>
+                        <button type="button" onclick="sendShellInput('db help')">db</button>
+                    </div>
+                    <div id="terminalOutput" class="terminal-output"></div>
+
+                    <form id="terminalForm" class="terminal-form">
+                        <span id="terminalPrompt">kali$</span>
+                        <input id="terminalInput" type="text" autocomplete="off" spellcheck="false">
+                    </form>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: WSL COMMAND ACADEMY / GUIDA COMANDI -->
+            <!-- ============================================= -->
+            <section id="wslGuideWindow" class="os-window wsl-guide-window hidden-window" data-window-title="WSL Command Academy">
+                <header class="window-bar">
+                    <span>WSL Command Academy</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="wslGuideWindow">-</button>
+                        <button type="button" data-maximize="wslGuideWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body wsl-guide-body">
+                    <div class="wsl-guide-intro">
+                        <strong>LINUX COMMANDS YOU CAN PRACTICE IN KALI WSL</strong>
+                        <span>Click a command to send it to the terminal. These are safe learning/local-admin commands.</span>
+                    </div>
+
+                    <div id="wslCommandDeck" class="wsl-command-deck"></div>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: LOGBOOK / APPUNTI DI LABORATORIO -->
+            <!-- ============================================= -->
+            <section id="logbookWindow" class="os-window logbook-window hidden-window" data-window-title="Operator Logbook">
+                <header class="window-bar">
+                    <span>Operator Logbook</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="logbookWindow">-</button>
+                        <button type="button" data-maximize="logbookWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body logbook-body">
+                    <form id="logbookForm" class="logbook-form">
+                        <textarea id="logbookInput" placeholder="Write lab notes, commands to remember, ideas..." spellcheck="false"></textarea>
+                        <input id="logbookTags" type="text" placeholder="tags: terminal, network, idea" autocomplete="off">
+                        <div>
+                            <button type="submit">Save Note</button>
+                            <button type="button" onclick="clearLogbook()">Clear All</button>
+                            <button type="button" onclick="copyLogbookMarkdown()">Copy Markdown</button>
+                        </div>
+                    </form>
+
+                    <input id="logbookSearch" class="logbook-search" type="text" placeholder="Search notes or tags..." autocomplete="off">
+                    <div id="logbookEntries" class="logbook-entries"></div>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: INTEL DATABASE / ARCHIVIO RICERCABILE -->
+            <!-- ============================================= -->
+            <section id="databaseWindow" class="os-window database-window hidden-window" data-window-title="Intel Database">
+                <header class="window-bar">
+                    <span>Intel Database</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="databaseWindow">-</button>
+                        <button type="button" data-maximize="databaseWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body database-body">
+                    <form id="databaseForm" class="database-form">
+                        <input id="databaseTitle" type="text" placeholder="Record title" autocomplete="off">
+                        <input id="databaseTags" type="text" placeholder="tags: tool, target, idea" autocomplete="off">
+                        <textarea id="databaseContent" placeholder="Paste commands, notes, links, credentials for your lab, snippets, checklists..." spellcheck="false"></textarea>
+                        <button type="submit">Save Record</button>
+                    </form>
+
+                    <div class="database-toolbar">
+                        <input id="databaseSearch" type="text" placeholder="Search database..." autocomplete="off">
+                        <span id="databaseStatus">0/0 record(s)</span>
+                        <button id="databaseExportButton" type="button">Copy JSON</button>
+                        <button id="databaseClearButton" type="button">Clear</button>
+                    </div>
+
+                    <div id="databaseList" class="database-list"></div>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: MATRIX SEARCH / RICERCA FILE LOCALE -->
+            <!-- ============================================= -->
+            <section id="searchWindow" class="os-window search-window hidden-window" data-window-title="Matrix Search">
+                <header class="window-bar">
+                    <span>Matrix Search</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="searchWindow">-</button>
+                        <button type="button" data-maximize="searchWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body search-body">
+                    <form id="searchForm" class="search-form">
+                        <label>
+                            Root
+                            <input id="searchRoot" type="text" value="/mnt/c/Users/steal" autocomplete="off">
+                        </label>
+
+                        <label>
+                            Query
+                            <input id="searchQuery" type="text" placeholder="*.js, CyberDesk, notes" autocomplete="off">
+                        </label>
+
+                        <button type="submit">Execute Search</button>
+                    </form>
+
+                    <div class="search-status-row">
+                        <span id="searchStatus">idle</span>
+                        <button type="button" onclick="clearSearchOutput()">Clear</button>
+                    </div>
+
+                    <div id="searchOutput" class="search-output"></div>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: NEURAL TRACE / MAPPA VISUALE -->
+            <!-- ============================================= -->
+            <section id="traceWindow" class="os-window trace-window" data-window-title="Neural Network Tracing">
+                <header class="window-bar">
+                    <span>Neural Network Tracing</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="traceWindow">-</button>
+                        <button type="button" data-maximize="traceWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body">
+                    <canvas id="traceCanvas" class="trace-canvas"></canvas>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: SYSTEM MONITOR / CONTROLLO MACCHINA -->
+            <!-- ============================================= -->
+            <section id="monitorWindow" class="os-window monitor-window" data-window-title="System Monitor">
+                <header class="window-bar">
+                    <span>System Monitor</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="monitorWindow">-</button>
+                        <button type="button" data-maximize="monitorWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body monitor-grid">
+                    <div class="metric">
+                        <span>CPU</span>
+                        <strong id="cpuMetric">--%</strong>
+                        <div class="meter"><i id="cpuMeter"></i></div>
+                    </div>
+
+                    <div class="metric">
+                        <span>RAM</span>
+                        <strong id="ramMetric">--%</strong>
+                        <div class="meter"><i id="ramMeter"></i></div>
+                    </div>
+
+                    <div class="metric">
+                        <span>HOST</span>
+                        <strong id="hostMetric">loading</strong>
+                    </div>
+
+                    <div class="metric">
+                        <span>IP</span>
+                        <strong id="ipMetric">loading</strong>
+                    </div>
+
+                    <!-- Grafici completi del monitor: gauge grandi e barre storico. -->
+                    <div class="system-chart-panel">
+                        <header>
+                            <h3>Live Utilization</h3>
+                            <span id="systemChartSummary">waiting for system sample</span>
+                        </header>
+
+                        <div class="gauge-row">
+                            <div class="gauge-card">
+                                <div id="cpuGauge" class="ring-gauge large" style="--value: 0">
+                                    <strong>--%</strong>
+                                </div>
+                                <span>CPU</span>
+                            </div>
+
+                            <div class="gauge-card">
+                                <div id="ramGauge" class="ring-gauge large" style="--value: 0">
+                                    <strong>--%</strong>
+                                </div>
+                                <span>RAM</span>
+                            </div>
+                        </div>
+
+                        <div class="history-stack">
+                            <div>
+                                <header><span>CPU HISTORY</span><strong id="cpuHistoryPeak">peak --%</strong></header>
+                                <div id="cpuHistoryChart" class="spark-bars"></div>
+                            </div>
+                            <div>
+                                <header><span>RAM HISTORY</span><strong id="ramHistoryPeak">peak --%</strong></header>
+                                <div id="ramHistoryChart" class="spark-bars ram"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="system-breakdown-panel">
+                        <h3>Machine Breakdown</h3>
+                        <p><span>CPU Model</span><strong id="cpuModelMetric">loading</strong></p>
+                        <p><span>Cores</span><strong id="cpuCoresMetric">--</strong></p>
+                        <p><span>RAM Used</span><strong id="ramUsedMetric">-- GB</strong></p>
+                        <p><span>RAM Free</span><strong id="ramFreeMetric">-- GB</strong></p>
+                        <p><span>Uptime</span><strong id="uptimeMetric">-- min</strong></p>
+                    </div>
+
+                    <div class="process-panel">
+                        <h3>Top Processes</h3>
+                        <div id="processList" class="process-list"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: NETWORK CENTER / RETE LOCALE -->
+            <!-- ============================================= -->
+            <section id="networkWindow" class="os-window network-window" data-window-title="Network Center">
+                <header class="window-bar">
+                    <span>Network Center</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="networkWindow">-</button>
+                        <button type="button" data-maximize="networkWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body">
+                    <div class="panel-heading">
+                        <h3>Local Interfaces</h3>
+                        <button type="button" onclick="refreshNetwork()">Refresh</button>
+                    </div>
+
+                    <div id="networkList" class="network-list"></div>
+
+                    <div class="safe-actions">
+                        <button type="button" onclick="runTerminalPreset('net')">Send to terminal</button>
+                        <button type="button" onclick="runTerminalPreset('ping-local')">Ping localhost</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: ETHICAL LAB / STRUMENTI SICURI -->
+            <!-- ============================================= -->
+            <section id="labWindow" class="os-window lab-window" data-window-title="Ethical Hacking Lab">
+                <header class="window-bar">
+                    <span>Ethical Hacking Lab</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="labWindow">-</button>
+                        <button type="button" data-maximize="labWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body lab-body">
+                    <div class="lab-notice">
+                        <strong>AUTHORIZED TESTING ONLY</strong>
+                        <span>Use these actions for your own machine, local lab, CTF or authorized systems.</span>
+                    </div>
+
+                    <div class="lab-grid">
+                        <button type="button" onclick="runTerminalPreset('sys')">
+                            <span>01</span>
+                            System fingerprint
+                        </button>
+
+                        <button type="button" onclick="runTerminalPreset('net')">
+                            <span>02</span>
+                            Network inventory
+                        </button>
+
+                        <button type="button" onclick="runTerminalPreset('process')">
+                            <span>03</span>
+                            Process review
+                        </button>
+
+                        <button type="button" onclick="runTerminalPreset('ping-local')">
+                            <span>04</span>
+                            Localhost probe
+                        </button>
+
+                        <button type="button" onclick="runTerminalPreset('ports')">
+                            <span>05</span>
+                            Listening ports
+                        </button>
+
+                        <button type="button" onclick="runTerminalPreset('disk')">
+                            <span>06</span>
+                            Disk and memory
+                        </button>
+
+                        <button type="button" onclick="runTerminalPreset('audit')">
+                            <span>07</span>
+                            Local audit bundle
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: KALI OPS / COMANDI LINUX PRONTI -->
+            <!-- ============================================= -->
+            <section id="opsWindow" class="os-window ops-window hidden-window" data-window-title="Kali Operations">
+                <header class="window-bar">
+                    <span>Kali Operations</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="opsWindow">-</button>
+                        <button type="button" data-maximize="opsWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body ops-body">
+                    <div class="ops-heading">
+                        <strong>LINUX COMMAND DECK</strong>
+                        <span>Click a command to send it to Kali WSL.</span>
+                    </div>
+
+                    <div class="ops-grid">
+                        <button type="button" onclick="runKaliCommand('pwd')">
+                            <span>WHERE</span>
+                            Print current directory
+                        </button>
+
+                        <button type="button" onclick="runKaliCommand('ls -lah')">
+                            <span>LIST</span>
+                            Show files with details
+                        </button>
+
+                        <button type="button" onclick="runKaliCommand('cd /mnt/c/Users/steal && ls -lah')">
+                            <span>HOME</span>
+                            Open Windows user folder
+                        </button>
+
+                        <button type="button" onclick="runKaliCommand('uname -a; cat /etc/os-release | head')">
+                            <span>SYS</span>
+                            Linux system fingerprint
+                        </button>
+
+                        <button type="button" onclick="runKaliCommand('ip addr')">
+                            <span>NET</span>
+                            Show network interfaces
+                        </button>
+
+                        <button type="button" onclick="runKaliCommand('ss -tulpn 2>/dev/null || netstat -tulpn 2>/dev/null')">
+                            <span>PORT</span>
+                            Show listening ports
+                        </button>
+
+                        <button type="button" onclick="runKaliCommand('ps aux --sort=-%mem | head -15')">
+                            <span>PROC</span>
+                            Top memory processes
+                        </button>
+
+                        <button type="button" onclick="runKaliCommand('df -h; free -h')">
+                            <span>DISK</span>
+                            Disk and memory usage
+                        </button>
+
+                        <button type="button" onclick="runKaliCommand('find /mnt/c/Users/steal -maxdepth 2 -type f | head -40')">
+                            <span>FIND</span>
+                            Search nearby files
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: APP LAUNCHER / AVVIA TUTTO DA QUI -->
+            <!-- ============================================= -->
+            <section id="launcherWindow" class="os-window launcher-window" data-window-title="Application Launcher">
+                <header class="window-bar">
+                    <span>Application Launcher</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="launcherWindow">-</button>
+                        <button type="button" data-maximize="launcherWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body launcher-body">
+                    <div class="launcher-controls">
+                        <input id="launcherSearch" type="text" placeholder="Search apps, folders, commands..." autocomplete="off">
+                        <div id="launcherCategories" class="launcher-categories"></div>
+                    </div>
+                    <div id="appLauncherGrid" class="app-launcher-grid"></div>
+                </div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: COMPILING MATRIX / FEED VISIVO -->
+            <!-- ============================================= -->
+            <section id="matrixWindow" class="os-window matrix-window" data-window-title="Compiling Matrix">
+                <header class="window-bar">
+                    <span>Compiling...</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="matrixWindow">-</button>
+                        <button type="button" data-maximize="matrixWindow">[]</button>
+                    </div>
+                </header>
+
+                <div id="compileMatrix" class="window-body compile-matrix"></div>
+            </section>
+
+            <!-- ============================================= -->
+            <!-- WINDOW: SETTINGS / CONFIGURAZIONE SEPARATA -->
+            <!-- ============================================= -->
+            <section id="settingsWindow" class="os-window settings-window hidden-window" data-window-title="Settings">
+                <header class="window-bar">
+                    <span>Settings</span>
+                    <div class="window-actions">
+                        <button type="button" data-minimize="settingsWindow">-</button>
+                        <button type="button" data-maximize="settingsWindow">[]</button>
+                    </div>
+                </header>
+
+                <div class="window-body settings-body">
+                    <div class="settings-section">
+                        <h3>Desktop Identity</h3>
+
+                        <div class="version-panel">
+                            <span>CyberDesk Version</span>
+                            <strong id="settingsVersion">v2.0.0</strong>
+                        </div>
+
+                        <label>
+                            System label
+                            <input id="settingSystemLabel" type="text" maxlength="32" autocomplete="off">
+                        </label>
+
+                        <label>
+                            Operator
+                            <input id="settingOperator" type="text" maxlength="32" autocomplete="off">
+                        </label>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Visual</h3>
+
+                        <label>
+                            Theme
+                            <select id="settingTheme">
+                                <option value="aqua">Aqua hacker</option>
+                                <option value="green">Official GOV green</option>
+                                <option value="red">Red alert</option>
+                                <option value="purple">Purple cyber</option>
+                                <option value="minimal">Minimal dark</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Scanline
+                            <select id="settingScanline">
+                                <option value="on">On</option>
+                                <option value="off">Off</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Performance
+                            <select id="settingPerformanceMode">
+                                <option value="auto">Auto</option>
+                                <option value="lite">Lite / old PC</option>
+                                <option value="full">Full cinematic</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Startup
+                            <select id="settingStartupMode">
+                                <option value="cinematic">Cinematic boot</option>
+                                <option value="fast">Fast desktop</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Auto lock
+                            <select id="settingAutoLock">
+                                <option value="0">Off</option>
+                                <option value="5">5 minutes</option>
+                                <option value="10">10 minutes</option>
+                                <option value="15">15 minutes</option>
+                                <option value="30">30 minutes</option>
+                                <option value="60">60 minutes</option>
+                            </select>
+                        </label>
+
+                        <p class="settings-meter">AUTO LOCK: <strong id="lockAutoTimer">10 min</strong></p>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Displays</h3>
+
+                        <label>
+                            Multi-screen OS
+                            <select id="settingDisplayMode">
+                                <option value="primary">Primary monitor only</option>
+                                <option value="all">Every monitor, different workspace</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Updates</h3>
+
+                        <label>
+                            Feed URL
+                            <input id="settingUpdateFeed" type="url" autocomplete="off" placeholder="https://updates.example.com/cyberdesk">
+                        </label>
+
+                        <div class="update-status-panel">
+                            <span id="updateStatusBadge" data-status="idle">IDLE</span>
+                            <p id="updateStatusText">Updater ready.</p>
+                            <div class="update-progress">
+                                <span id="updateProgressBar"></span>
+                            </div>
+                        </div>
+
+                        <div class="settings-actions">
+                            <button type="button" onclick="saveUpdateFeed()">Save Feed</button>
+                            <button type="button" onclick="checkForUpdates()">Check Updates</button>
+                            <button id="downloadUpdateButton" type="button" onclick="downloadUpdate()" disabled>Download</button>
+                            <button id="installUpdateButton" type="button" onclick="installUpdate()" disabled>Install</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Custom Launcher</h3>
+
+                        <label>
+                            Name
+                            <input id="customName" type="text" maxlength="24" autocomplete="off">
+                        </label>
+
+                        <label>
+                            Type
+                            <select id="customType">
+                                <option value="url">Web link</option>
+                                <option value="folder">Folder</option>
+                                <option value="app">App command</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Target
+                            <input id="customTarget" type="text" autocomplete="off">
+                        </label>
+
+                        <div class="settings-actions">
+                            <button type="button" onclick="addCustomLauncher()">Add</button>
+                            <button type="button" onclick="clearCustomLaunchers()">Clear custom</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-actions sticky-actions">
+                        <button type="button" onclick="saveSettings()">Save Settings</button>
+                        <button type="button" onclick="resetSettings()">Reset</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- ===================================================== -->
+    <!-- RENDERER SCRIPT: logica dell'interfaccia Electron -->
+    <!-- ===================================================== -->
+    <script src="renderer.js"></script>
+</body>
+
+</html>
